@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 
 
-client = discord.Client()
+client = discord.Client(intents=discord.Intents.default())
 
 openai.api_key = os.getenv("GPT3_TOKEN")
 BotKey = os.getenv("DISCORD_TOKEN")
